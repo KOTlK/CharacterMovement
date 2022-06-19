@@ -1,4 +1,5 @@
-﻿using CharacterMovement.Movement2D;
+﻿using System;
+using CharacterMovement.Movement2D;
 using UnityEngine;
 
 namespace CharacterMovement.Samples.Transform
@@ -39,5 +40,6 @@ namespace CharacterMovement.Samples.Transform
             
             _movement.Move(new Vector3(x, y));
         }
+
     }
 }
