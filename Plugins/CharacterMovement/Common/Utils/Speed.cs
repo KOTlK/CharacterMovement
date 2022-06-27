@@ -1,14 +1,18 @@
-﻿namespace CharacterMovement
+﻿using System;
+using UnityEngine;
+
+namespace CharacterMovement
 {
     //Horrible mutable shit. Should not exist, but.
-    public class Speed : ISpeed
+    [Serializable]
+    public sealed class Speed : ISpeed
     {
         public Speed(float start)
         {
             Current = start;
         }
         
-        public float Current { get; private set; }
+        [field: SerializeField] public float Current { get; private set; }
 
         public void Change(float newSpeed)
         {
